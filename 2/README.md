@@ -1,4 +1,4 @@
-## Day 1 Notes
+## Day 2 Notes
 
 Ids are lines within a file given 3 sets of cubes which are separated via semicolon
 - Remove unnecessary string until colon
