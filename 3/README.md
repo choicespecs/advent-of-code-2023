@@ -1,4 +1,4 @@
-## Day 2 Notes
+## Day 3 Notes
 
 [Advent of Code 2023 Day 3](https://adventofcode.com/2023/day/3)
 
