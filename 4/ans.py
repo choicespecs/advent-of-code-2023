@@ -48,5 +48,3 @@ def part2():
             for j in range(winner_count):
                 scratchcards[i + (j + 1)] += scratchcards[i]
     return sum(scratchcards)
-
-part2()
