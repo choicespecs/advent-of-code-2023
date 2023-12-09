@@ -42,7 +42,7 @@ def part2():
         while seeds:
             s, e = seeds.pop()
             for a,b,c in ranges:
-                os = max(s,b)
+                os = max(s, b)
                 oe = min(e, b + c)
                 if os < oe:
                     new.append((os - b + a, oe - b + a))

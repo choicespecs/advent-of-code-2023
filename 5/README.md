@@ -30,4 +30,3 @@ So to solve (we have our seeds x)
 - If b <= x <= b + c, we can apply our mapping else we can assume x = x for the new mapping
   - If we can apply mapping, we must subtract x - b (get range to apply for dest a) then we can add a to new dest value.
 - Iterate through all blocks and we can safely assume iterating from one block can be applied to next block until we reach final iteration.
-
