@@ -66,13 +66,21 @@ def part2():
         if hand.count("J") == 5:
             return [hand]
 
-        # If there is a J, replace it with the card with the highest count
-        if "J" in hand:
-            max_count_card = max(set(hand) - {"J"}, key=lambda card: hand.count(card))
-            replaced_hand = hand.replace("J", max_count_card)
-            return [replaced_hand]
+        # Find the card with the highest count, excluding J
+        max_count_card = None
+        max_count = 0
+        for card in set(hand) - {"J"}:
+            count = hand.count(card)
+            if count > max_count:
+                max_count = count
+                max_count_card = card
 
-        return [x + y for x in hand[0] for y in replacements(hand[1:])]
+        # If there is a J, replace it with the card with the highest count
+        if "J" in hand and max_count_card is not None:
+            return [hand.replace("J", max_count_card)]
+
+        # No replacements needed
+        return [hand]
     def classify(hand):
         return max(map(score, replacements(hand)))
 
